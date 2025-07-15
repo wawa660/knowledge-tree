@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crescent Library Knowledge Tree</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: "Inter", sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f0f4f8; /* Light background */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,19 +20,19 @@
         }
         .container {
             background-color: #ffffff;
-            border-radius: 1rem;
+            border-radius: 1rem; /* Rounded corners */
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
-            max-width: 800px;
+            max-width: 800px; /* Max width for better readability */
             width: 100%;
             text-align: center;
         }
         img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 0.75rem;
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove extra space below image */
+            margin: 0 auto; /* Center the image */
+            border-radius: 0.75rem; /* Slightly rounded image corners */
         }
         h1 {
             color: #2c3e50;
@@ -51,27 +52,91 @@
         <h1>Crescent Library Knowledge Tree</h1>
         <p>Click on the QR code areas below to navigate to the respective resources.</p>
 
+        <!-- The image with usemap attribute linking to the map -->
         <img
             src="creslibrary_knowledge_tree.jpeg"
             alt="Crescent Library Knowledge Tree with QR Codes"
             usemap="#knowledgeTreeMap"
             class="rounded-lg shadow-md"
+            id="knowledgeTreeImage"
         >
 
+        <!-- The map element defining clickable areas -->
         <map name="knowledgeTreeMap">
-            <area shape="rect" coords="345,152,430,239" href="https://library.crescent.education/" target="_blank" alt="Library Portal">
-            <area shape="rect" coords="523,186,611,273" href="https://library.crescent.education/2014/09/22/subscribed-e-books/" target="_blank" alt="E-Books">
-            <area shape="rect" coords="171,209,260,293" href="https://crescent.knimbus.com/portal/v2/default/home" target="_blank" alt="Off-Campus Access">
-            <area shape="rect" coords="375,305,463,394" href="https://library.crescent.education/2014/09/22/subscribed-e-journals/" target="_blank" alt="E-Journals">
-            <area shape="rect" coords="654,323,741,409" href="https://library.crescent.education/old-questions-2/" target="_blank" alt="Old Questions">
-            <area shape="rect" coords="92,351,181,441" href="https://library.crescent.education/2023/01/09/open-educational-resources/" target="_blank" alt="Educational Resources">
-            <area shape="rect" coords="318,457,402,543" href="https://crescent.irins.org/" target="_blank" alt="Crescent IRINS">
-            <area shape="rect" coords="504,419,591,507" href="https://library.crescent.education/ph-d-thesis/" target="_blank" alt="PhD Theses">
-            <area shape="rect" coords="657,489,745,575" href="https://library.crescent.education/2022/06/08/research-support/" target="_blank" alt="Research Support Services">
-            <area shape="rect" coords="91,500,180,589" href="https://library.crescent.education/2014/09/22/open-access-e-journals/" target="_blank" alt="E-Journals (Open Access)">
-            <area shape="rect" coords="184,638,273,725" href="https://library.crescent.education/2022/06/08/study-materials-for-competitive-exams/" target="_blank" alt="Study Materials for Competitive Exams">
-            <area shape="rect" coords="557,621,646,708" href="https://www.instagram.com/crescentreadersclub/?hl=en" target="_blank" alt="Crescent Readers Club">
+            <!-- LIBRARY PORTAL -->
+            <area shape="rect" coords="345,152,430,239" href="https://library.crescent.education/" target="_blank" alt="Library Portal" data-original-coords="345,152,430,239">
+            <!-- E-BOOKS -->
+            <area shape="rect" coords="523,186,611,273" href="https://library.crescent.education/2014/09/22/subscribed-e-books/" target="_blank" alt="E-Books" data-original-coords="523,186,611,273">
+            <!-- OFF-CAMPUS ACCESS -->
+            <area shape="rect" coords="171,209,260,293" href="https://crescent.knimbus.com/portal/v2/default/home" target="_blank" alt="Off-Campus Access" data-original-coords="171,209,260,293">
+            <!-- E-JOURNALS -->
+            <area shape="rect" coords="375,305,463,394" href="https://library.crescent.education/2014/09/22/subscribed-e-journals/" target="_blank" alt="E-Journals" data-original-coords="375,305,463,394">
+            <!-- OLD QUESTIONS -->
+            <area shape="rect" coords="654,323,741,409" href="https://library.crescent.education/old-questions-2/" target="_blank" alt="Old Questions" data-original-coords="654,323,741,409">
+            <!-- EDUCATIONAL RESOURCES -->
+            <area shape="rect" coords="92,351,181,441" href="https://library.crescent.education/2023/01/09/open-educational-resources/" target="_blank" alt="Educational Resources" data-original-coords="92,351,181,441">
+            <!-- CRESCENT IRINS -->
+            <area shape="rect" coords="318,457,402,543" href="https://crescent.irins.org/" target="_blank" alt="Crescent IRINS" data-original-coords="318,457,402,543">
+            <!-- PHD THESES -->
+            <area shape="rect" coords="504,419,591,507" href="https://library.crescent.education/ph-d-thesis/" target="_blank" alt="PhD Theses" data-original-coords="504,419,591,507">
+            <!-- RESEARCH SUPPORT SERVICES -->
+            <area shape="rect" coords="657,489,745,575" href="https://library.crescent.education/2022/06/08/research-support/" target="_blank" alt="Research Support Services" data-original-coords="657,489,745,575">
+            <!-- E-JOURNALS (OPEN ACCESS) -->
+            <area shape="rect" coords="91,500,180,589" href="https://library.crescent.education/2014/09/22/open-access-e-journals/" target="_blank" alt="E-Journals (Open Access)" data-original-coords="91,500,180,589">
+            <!-- STUDY MATERIALS FOR COMPETITIVE EXAMS -->
+            <area shape="rect" coords="184,638,273,725" href="https://library.crescent.education/2022/06/08/study-materials-for-competitive-exams/" target="_blank" alt="Study Materials for Competitive Exams" data-original-coords="184,638,273,725">
+            <!-- CRESCENT READERS CLUB -->
+            <area shape="rect" coords="557,621,646,708" href="https://www.instagram.com/crescentreadersclub/?hl=en" target="_blank" alt="Crescent Readers Club" data-original-coords="557,621,646,708">
         </map>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const img = document.getElementById('knowledgeTreeImage');
+            const areas = document.querySelectorAll('map[name="knowledgeTreeMap"] area');
+
+            // Store original image dimensions (assuming the image itself is 800px wide based on container max-width)
+            // It's best to get the actual original dimensions if possible, but 800px is a reasonable guess from the container
+            // For more robust solution, you might pre-load the image to get its naturalWidth/naturalHeight
+            const originalImageWidth = 800; // This should be the natural width of creslibrary_knowledge_tree.jpeg
+            const originalImageHeight = 999; // This should be the natural height of creslibrary_knowledge_tree.jpeg
+
+            // Function to resize the map areas
+            function resizeMapAreas() {
+                // Get the current rendered width of the image
+                const currentImageWidth = img.offsetWidth;
+                const currentImageHeight = img.offsetHeight;
+
+                // Calculate the scaling factor
+                const scaleX = currentImageWidth / originalImageWidth;
+                const scaleY = currentImageHeight / originalImageHeight;
+
+                areas.forEach(area => {
+                    // Get original coordinates from data attribute
+                    const originalCoords = area.getAttribute('data-original-coords').split(',').map(Number);
+                    const newCoords = [];
+
+                    // Apply scaling to each coordinate
+                    for (let i = 0; i < originalCoords.length; i += 2) {
+                        newCoords.push(Math.round(originalCoords[i] * scaleX)); // X coordinate
+                        newCoords.push(Math.round(originalCoords[i+1] * scaleY)); // Y coordinate
+                    }
+                    area.coords = newCoords.join(',');
+                });
+            }
+
+            // Call resize function when image loads (important for initial load)
+            img.onload = resizeMapAreas;
+
+            // Call resize function on window resize
+            window.addEventListener('resize', resizeMapAreas);
+
+            // Also call it once on DOMContentLoaded in case image loads very fast from cache
+            // and onload doesn't fire as expected or if the image is already loaded.
+            if (img.complete) {
+                resizeMapAreas();
+            }
+        });
+    </script>
 </body>
 </html>
